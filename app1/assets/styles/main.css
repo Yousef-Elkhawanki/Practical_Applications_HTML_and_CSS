@@ -1,0 +1,217 @@
+/* Global Style  */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700&display=swap');
+:root {
+    --main-color:#4ed59f;
+    --white:#fff;
+    --border:0.1rem solid;
+    --outfit-font:'Outfit', sans-serif;
+    --pading-inline:6rem;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--outfit-font);
+    background-color: red;
+}
+
+li {
+    list-style:none;
+}
+a {
+    text-decoration: none;
+    color: var(--white);
+     transition: .4s linear;
+}
+.container {
+    padding-inline: var(--pading-inline);
+}
+.active {
+    
+}
+
+/* start navbar  */
+nav {
+    padding-block: 2rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9;
+}
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu ul {
+    display: flex;
+    gap: 2rem;
+}
+.menu ul a {
+    font-size: 1.5rem;
+}
+.menu .active a {
+    color: var(--main-color);
+}
+.menu .active {
+    position: relative;
+}
+.menu li {
+    position: relative;
+}
+
+.menu li:hover::before {
+    opacity: 1;
+}
+.menu li:hover a {
+    color: var(--main-color);
+}
+.menu li::before {
+    content: "";
+    width:.5rem ;
+    height:.5rem ;
+    border-radius: 50%;
+    background: var(--main-color);
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: .4s linear;
+}
+.menu .active::before {
+    content: "";
+    width:.5rem ;
+    height:.5rem ;
+    border-radius: 50%;
+    background: var(--main-color);
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    opacity: 1;
+    transform: translateY(-50%);
+}
+.navbtn button {
+    width: fit-content;
+    background: rgba(59, 237, 178 , 0.2);
+    color: var(--white);
+    padding: .8rem 1.8rem;
+    border: var(--border);
+    border-color: var(--main-color);
+    border-radius: .3rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/* start banner */
+
+.banner {
+    background: url(../images/home-bg.png);
+    min-height: 150vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+/* .banner .container {
+    min-width: 30vh;
+    background: red;
+} */
+.banner .container .banner-header {
+    position: absolute;
+    top: 30%;
+    /* background: red; */
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.banner .container .banner-header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-header h2 {
+    font-size: 3rem;
+    color: var(--white);
+    font-weight: 400;
+}
+
+.title-header {
+    position: relative;
+    width: fit-content;
+    margin: 0 2rem;
+    padding: 1rem;
+}
+.title-header h2 {
+    background: #17273F;
+    padding: .6rem .8rem;
+    color: var(--main-color);
+
+}
+
+.title-header img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    /* width: 100%; */
+}
+.banner-header-description {
+    margin-top: 1rem;
+}
+.banner-header-description p {
+    text-align: center;
+    color: var(--white);
+    opacity: .5;
+    width: 60%;
+    margin: auto;
+    font-size: 1.5rem;
+    font-weight: 200;
+    line-height: 1.5;
+}
+.free-trial {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+.free-trial h6 {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+.free-trial .icon {
+    width: 3rem;
+    height: 3rem;
+    border: var(--border);
+    border-color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.free-trial .icon i {
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+.robotImage {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.shape1 ,.shape2 {
+    position: absolute;
+}
+
+.shape1 {
+    top: 30%;
+}
+.shape2 {
+    bottom: 40%;
+    right: 10%;
+}
