@@ -8,5 +8,6 @@
 ### HTML and Css Applications :
 
 <ul>
- <a href="">1- اMegaBot Banner</a>
+ <li><a href="">MegaBot Banner</a></li>
+ <li><a href="">Adidas Card</a></li>
 </ul>
