@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700&display=swap');
+:root {
+    --main-color:#9e1724;
+    --white:#fff;
+    --dark:#1a1a1a;
+    --outfit-font:'Outfit', sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--outfit-font);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a1a;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* start navbar  */
+nav {
+    width: 50%;
+    margin: auto;
+    background: #2a2a2a;
+    border-radius: 1rem;
+    box-shadow: 0 0 50px #2a2a2a;
+    padding: 2rem 0;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+nav ul a {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+}
+nav ul li {
+    position: relative;
+    padding: .8rem 1.8rem;
+    border-radius: .6rem;
+    z-index: 1;
+    overflow: hidden;
+}
+
+nav ul li::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--main-color);
+    box-shadow: 0 0 100px var(--main-color);
+    position: absolute;
+    border-radius: .6rem;
+    top: 0;
+    left: -200%;
+    z-index: -1;
+    transition: 1s linear;
+    transform: skew(-100deg);
+    transform-origin: bottom;
+}
+
+nav ul li:hover::before {
+    left: 0;
+    transform: skew(0);
+}
